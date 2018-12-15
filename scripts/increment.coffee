@@ -3,7 +3,7 @@ module.exports = (robot) ->
 
   KEY_LIST = 'increment-list2'
   robot.hear /.*\+\+$/i, (msg) ->
-    name = msg.match[0].replace('++', '')
+    name = msg.match[0].replace('++', '').trim()
     # インクリメント
     list = robot.brain.get(KEY_LIST) ? []
 
